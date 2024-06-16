@@ -1,0 +1,107 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-size: 16px;
+    font-family: sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: paleturquoise;
+  }
+
+#form-container {
+  background-color: white;
+  margin: 100px 20px 20px;
+  padding: 20px;
+  border: 1px solid #000;
+  box-shadow: 0 0 5px 1px black;
+  border-radius: 10px;
+}
+
+form h1, h2 {
+  text-align: center;
+  padding: 0 20px;
+}
+
+#input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#input-container fieldset {
+  flex: 1 1 auto;
+  border: none;
+}
+
+#input-container label {
+  padding: 10px 0;
+  display: block;
+}
+
+#input-container input, select {
+  width: 100%;
+  padding: 10px 8px;
+  font-size: 0.9em;
+}
+
+#input-container input[type="range"] {
+  margin-top: 20px;
+  display: block;
+}
+
+#results-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#results-container div {
+  flex: 1 1 auto;
+  padding: 0 10px;
+}
+
+#results-container p {
+  margin: 3px 0;
+}
+
+#left-break {
+  border-right: 1px solid black;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+@media (max-width: 630px) {
+  
+  #form-container {
+    margin-top: 20px;
+  }
+  
+  #input-container, #results-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #input-container fieldset {
+    width: 100%;
+  }
+  
+  #results-container {
+    display: block;
+  }
+  
+  #left-break {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  
+}
